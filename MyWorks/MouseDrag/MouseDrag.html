@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1.0,minimum-scale=1.0,initial-scale=1.0">
+	<title>鼠标拖拽效果</title>
+	<link rel="stylesheet" href="mousedrag.css">
+	<!-- 慕课网lyn老师 -->
+</head>
+<body>
+	<!-- html结构 -->
+	<!-- 1.鼠标在标题栏按下 -->
+	<!-- 2.鼠标开始移动 -->
+	<!-- 3.鼠标松开 -->
+	<div class="dialog" id="dialog">
+		<div class="dialog-title" id="dialogTitle">
+			登录通行证
+			<a href="javascript:hiddenDialog()" class="dialog-title-closebtn"></a>
+		</div>
+		<div class="dialog-content">
+			<div class="dialog-pt15 dialog-l40">
+				<input type="input" class="dialog-input dialog-input-username" value="手机/邮箱/用户名">
+			</div>
+			<div class="dialog-pt15 dialog-l40">
+				<input type="input" class="dialog-input dialog-input-password" value="密码">
+			</div>
+			<div class="dialog-l40">
+				<a href="#">忘记密码</a>
+			</div>
+			<div class="dialog-pt15">
+				<a href="#" class="dialog-submit">登录</a>
+			</div>
+			<div class="dialog-l40">
+				<a href="#">立即注册</a>
+			</div>
+		</div>
+	</div>
+	<div id="mask" class="mask" onselectstart="return false"></div>
+	<div class="link" >
+		<a href="javascript:showDialog()">登录</a>
+	</div>
+	<script src="mousedrag.js"></script>
+</body>
+</html>
