@@ -1,0 +1,138 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0,  maximum-scale=1.0, minimum-scale=1.0,user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>html5手机触屏网站底部导航菜单上拉伸缩自适应屏幕js代码/JS/jiaodiantu/</title>
+<link href="index1.css" rel="stylesheet" type="text/css" />
+<link href="base_utf-8.css" rel="stylesheet" type="text/css" />
+<script src="xui-2.3.2.min.js"></script>
+<script src="js/jquery.js"></script>
+<script src="js/xui-2.3.2.min.js"></script>
+<script src="js/NTUI.min.js"></script>
+<script type="text/javascript" src="js/s.js"></script>
+
+<style>
+body{font: 12px/1.5 Tahoma,Helvetica,Arial,"宋体",sans-serif; background: #FFF; text-align: center; color: #333; }
+</style>
+</head>
+
+<body>
+
+    
+     <section class="dh2 dorder_f navBtn2La" style="display:block">
+    	<ul>
+       		<li><a href="news_13_1/default.htm" class="xiaotu"><img src="images/xw.png" /></a><a href="news_13_1/default.htm">新闻</a></li>
+            <li><a href="video_36_1/default.htm" class="xiaotu"><img src="images/gl.png" /></a><a href="gonglue_31_1/default.htm">攻略</a></li>
+            <li><a href="tupian_38_1/default.htm" class="xiaotu"><img src="images/sp.png" /></a><a href="video_36_1/default.htm">视频</a></li>
+            <li><a href="wenda_120_1/default.htm" class="xiaotu"><img src="images/wd.png" /></a><a href="wenda_120_1/default.htm">问答</a></li>
+            <li><a href="tupian_38_1/default.htm" class="xiaotu"><img src="images/tj.png" /></a><a href="tupian_38_1/default.htm">图集</a></li>
+            <li><a href="moni_123_1/default.htm" class="xiaotu"><img src="images/mn.png" /></a><a href="moni_123_1/default.htm">模拟</a></li>
+            <li><a href="hardware_35_1/default.htm" class="xiaotu"><img src="images/yj.png" /></a><a href="hardware_35_1/default.htm">硬件</a></li>
+			<li><a href="down_76_1/default.htm" class="xiaotu"><img src="images/xz.png" /></a><a href="down_76_1/default.htm">下载</a></li>           
+		   <li><a href="ku_73_1/default.htm" class="xiaotu"><img src="images/yxk.png" /></a><a href="ku_73_1/default.htm">游戏库</a></li>
+            
+        </ul>
+    </section>  
+    
+    
+     
+<footer>
+  <div id="top" class="footBar"> 
+    	<a href="default.htm" class="top1"></a>
+   		<a href="default.htm" class="top2 fr"></a>
+    </div>
+      <div class="navBtn2">
+<span>导航</span>
+<div class="triDown2"></div>
+</div>
+</footer>
+
+    
+
+
+<script>
+scrollTo(0,1);
+//导航
+NTUI.htmlHelper.navigator();
+tpl={};
+tpl.cateEntry = '进入<#=cname#>频道';
+function SlidePhoto(id){
+    var photoCtrls = X(id+' .ctrls li'),imgPageBtn = X(id+' .imgPageBtn'),
+            gallerySlide = new NTUI.slide(X(id+' .gallery')[0],{
+                onTouchEnd:function(e,cp){
+                    photoCtrls.removeClass('current');
+                    photoCtrls[cp].className = 'current';
+                }
+            });
+    imgPageBtn.click(function(){
+        if(this.className.indexOf('imgPageBtn-l')===-1){
+            gallerySlide.next(0.4,1);
+        }
+        else{
+            gallerySlide.prev(0.4,1);
+        }
+    });
+}
+//图集
+new SlidePhoto("#indexPhoto");
+new SlidePhoto("#indexPhoto1");
+//要闻头图
+// new SlidePhoto("#focusPhoto");
+mask.style.display = 'none';
+X('.topNews,body>footer').css({display:'block'});
+loading=false;
+//搜索模块
+var searchForm = X('#searchForm'),searchText = X('#searchText'),searchBtn = X('#searchBtn'),searchDefault;
+searchDefault = searchText.attr('data');
+(function(searchDefault){
+    var v = searchDefault[0].split(','),
+            i = Math.floor(Math.random()*v.length);
+    searchText.attr('value',v[i]);
+})(searchDefault);
+searchBtn.click(function(){
+    doSearch();
+});
+searchForm.submit(function(){
+    doSearch();
+    return false;
+});
+function doSearch(){
+    var ls = window.localStorage,v = searchText.attr('value');
+    if(ls){
+        ls.setItem('3g.163.touch.searchvalue',v);
+        searchForm[0].submit();
+    }
+}</script>
+    
+<script>
+	$(function(){
+		$("#yxxzgd").click(function(){
+			$("#yxxzla").toggle();
+		});
+		
+		$("#yxk").click(function(){
+			$("#yxkla").toggle();
+		});
+		
+		$("#navBtnOne").click(function(){
+			$("#navBtnOneLa").toggle();
+		});
+		
+		$(".navBtn2").click(function(){
+			$(".navBtn2La").toggle();
+			var top=$(".navBtn2La").offset().top;
+			var scoll=top+$(".navBtn2La").height();
+		    $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+            $body.animate({
+				scrollTop: scoll
+			},700);
+		});
+		
+	})
+	
+</script>       
+</body>
+</html>

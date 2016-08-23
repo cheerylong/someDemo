@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<title>风烛源店铺-手机wap触屏js特效网站相册带计数功能源码购买</title>
+<link href="css/163css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/zepto_min.js"></script>
+<script type="text/javascript" src="js/touchslider.js"></script>
+</head>
+<body>
+<div class="box-163css" id="box">
+	<div class="title">麦蒂仅战98秒 球迷怒扔杂物比赛提前结束</div>
+    <div id="slider" class="swipe">
+      <ul class="piclist">
+        <li><p>明3:45尤文蓝军生死战</p><img src="images/img05.jpg"></li>
+        <li><p>赛季巡礼福建:王哲林领衔青年军</p><img src="images/img06.jpg"></li>
+		<li><p>《现代战争4 零爆点》新视频放出 热血满点</p><img src="images/img07.jpg"></li>
+		<li><p>曼联拟5000万购德国双星</p><img src="images/img08.jpg"></li>
+        <li><p>意甲10大争议:尤文全获益</p><img src="images/img05.jpg"></li>
+      </ul>
+    </div>
+    <div class="count"><b class="bi">1</b>/<b class="bcount"></b></div>
+    <span class="s_intro"><b class="b_btn">简介</b><div class="intro">本场比赛麦蒂（微博）在上半场比赛仅仅出场1分38秒的时间，在出场2投2中得到5分之后，麦蒂就一直未有登场。由于比赛场馆暖气供应不足过冷，麦蒂为避免受伤之后一直坐在板凳席上，加上上午的时候麦蒂因为肠胃不舒服缺席了训练</div></span>
+    
+</div>
+<script type="text/javascript">
+$(function(){
+	var num=$('#slider').find('li').size();
+	$('.bcount').text(num);	
+	$('.b_btn').click(function(){
+		$(this).toggleClass('b_btn_active');
+		$('.intro').toggle();
+	})
+})
+var tt=new TouchSlider({id:'slider','auto':'-1',fx:'ease-out',direction:'left',speed:600,timeout:5000,'before':function(index){
+	var es=document.getElementById('slider').getElementsByTagName('li');
+	var it=$(es[index]).index()+1;	
+	$('.bi').text(it);	
+	var tx=$(es[index]).find('p').text();	
+	$('.title').text(tx);
+}});
+</script>
+</body>
+</html>

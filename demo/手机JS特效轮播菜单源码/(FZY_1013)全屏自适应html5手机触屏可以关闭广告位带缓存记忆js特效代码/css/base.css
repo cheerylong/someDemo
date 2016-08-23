@@ -1,0 +1,5 @@
+@charset "gb2312";
+/* ÑùÊ½¸´Î» */
+.appdown{ display:none; width:100%; height:auto; min-height:60px; position:relative;}
+.appdown img{ display:block; width:100%;}
+.appdown .close{ display:block; width:40px; height:40px; margin-top:-20px; background:url('../images/icon40close.png') center center no-repeat; position:absolute; top:50%; right:0; z-index:100; overflow:hidden;}

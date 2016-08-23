@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>风烛源店铺-多图触屏版自适应手机wap网站幻灯手机js特效源码购买-http://429480486.taobao.com</title>
+<link href="css/css.css" type="text/css" rel="stylesheet">
+<script src="js/ender.js"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+  this.myScroll = $('#wrapper').iScroll({
+    snap: true,
+    momentum: false,
+    hScrollbar: false,
+    onScrollEnd: function () {
+      document.querySelector('#indicator > li.active').className = '';
+      document.querySelector('#indicator > li:nth-child(' + (this.currPageX+1) + ')').className = 'active';
+    }
+   })
+})
+</script>
+</head>
+<body>
+<div class="box_163css">
+    <div id="wrapper">
+      <div id="scroller">
+        <ul id="thelist">
+          <li><span><img src="images/img01.jpg" /><em>专家称我国油价处于世界中等</em></span><span><img src="images/img02.jpg" /><em>国内成品油价格4年间15涨9跌</em></span></li>
+          <li><span><img src="images/img03.jpg" /><em>林柏强：十分怀念油价3元时代</em></span><span><img src="images/img04.jpg" /><em>传胡晓炼将出任中行董事长</em></span></li>
+          <li><span><img src="images/img01.jpg" /><em>专家称我国油价处于世界中等</em></span><span><img src="images/img02.jpg" /><em>国内成品油价格4年间15涨9跌</em></span></li>
+          <li><span><img src="images/img03.jpg" /><em>林柏强：十分怀念油价3元时代</em></span><span><img src="images/img04.jpg" /><em>传胡晓炼将出任中行董事长</em></span></li>
+        </ul>
+      </div>
+    </div>
+    <div id="nav">
+      <div id="prev" onClick="myScroll.scrollToPage('prev', 0);return false">&nbsp</div>
+      <ul id="indicator">
+        <li class="active">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+      <div id="next" onClick="myScroll.scrollToPage('next', 0);return false">&nbsp</div>
+    </div>
+</div>
+</body>
+</html>

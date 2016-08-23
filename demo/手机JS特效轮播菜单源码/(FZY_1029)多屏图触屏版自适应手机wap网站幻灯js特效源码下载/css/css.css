@@ -1,0 +1,31 @@
+/* CSS Document */
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,form,img,dl,dt,dd,table,th,td,blockquote,fieldset,div,strong,label,em{margin:0;padding:0;border:0;}
+ul,ol,li{list-style:none;}
+input,button{margin:0;font-size:12px;vertical-align:middle;}
+body{font-family:'微软雅黑',Geneva, Arial, Helvetica, sans-serif;text-align:center; margin:0 auto; color:#666; font-size:13px;}
+table{border-collapse:collapse;border-spacing:0;}
+
+.box_163css{width:100%; margin:0 auto;}
+#wrapper {width:100%;float:left;position:relative;z-index:1;overflow:hidden;-webkit-border-radius:10px;-moz-border-radius:10px;
+-o-border-radius:10px;border-radius:10px; margin-bottom:15px;}
+#scroller{width:400%;height:100%;float:left;}
+#scroller ul{display:block;float:left;width:100%; height:100%;}
+#scroller li{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;display:block; float:left;
+width:25%;text-align:center;font-family:georgia;font-size:18px;line-height:140%;}
+
+
+#nav{width:150px; margin:0 auto;}
+#prev, #next{ display:inline-block;cursor:pointer; float:left;}
+#indicator, #indicator > li{display:block; float:left;list-style:none;}
+#indicator{padding:12px 0 0 15px; width:65px; float:left;}
+#indicator > li{text-indent:-9999em;width:8px; height:8px;-webkit-border-radius:4px;-moz-border-radius:4px;- o-border-radius:4px;border-radius:4px;
+background:#ddd;overflow:hidden;margin-right:6px;}
+#indicator > li.active {background:#c00;}
+#indicator > li:last-child {margin:0;}
+
+#prev{ background:url(../images/btn.gif) no-repeat; width:25px; height:19px; margin-top:7px;}
+#next{ background:url(../images/btn.gif) no-repeat -26px 0; width:25px; height:19px; margin-top:7px;}
+#thelist{ padding-top:15px;}
+#thelist li span{ width:50%; display:inline-block;}
+#thelist li span img{ width:80%; display:block; margin:0 auto; max-width:282px; max-height:282px;}
+#thelist li em{ display:block;width:80%; font-style:normal; border:1px solid #cacaca; max-width:282px;box-sizing:border-box; background:#eaeaea; font-size:14px; color:#5c5c5c; height:28px; line-height:28px; margin:0 auto;}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			var system = {
+				win: false,
+				mac: false,
+				xll: false
+			};
+			//检测平台   
+			var p = navigator.platform;
+			alert(p);
+			system.win = p.indexOf("Win") == 0;
+			system.mac = p.indexOf("Mac") == 0;
+			system.x11 = (p == "X11") || (p.indexOf("Linux") == 0);
+			//跳转语句   
+			if (system.win || system.mac || system.xll) { //转向电脑端
+				alert("It is Pc!");
+				//window.location.href = "www.daimami.com";
+			} else {
+				alert("It is mobile!");
+				//window.location.href = "www.daimami.com"; //转向手机端
+				}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Javascript 返回顶部</title>
+	<style type="text/css">
+		#btn {width:40px; height:40px; position:fixed; right:65px; bottom:10px; display:block; background:url(images/top_bg.png) no-repeat left top;}
+		#btn:hover {background:url(images/top_bg.png) no-repeat 0 -39px;}
+		.bg {width:1190px; margin:0 auto;}
+	</style>
+
+</head>
+<body>
+	<a href="javascript:;" id="btn" title="回到顶部" onclick="pageScroll()"></a>
+	<div class="bg">
+		<img src="images/tb_bg.jpg" alt="" />
+	</div>
+		<script>
+	window.onload = function(){
+		var obtn = document.getElementById('btn');
+		toTop(obtn);
+		alert(obtn)
+	}
+	function toTop(obj){
+			var timer = null;
+			obj.onclick = function(){
+				timer = setInterval(function(){
+					var topscroll = document.documentElement.scrollTop||document.body.scrollTop;
+					var speed = Math.floor(-topscroll / 5);
+					document.documentElement.scrollTop = document.body.scrollTop = topscroll + speed;
+					if(topscroll == 0){
+						clearInterval(timer);
+					}
+				}, 100);
+			}
+	}
+
+function pageScroll(){
+    //把内容滚动指定的像素数（第一个参数是向右滚动的像素数，第二个参数是向下滚动的像素数）
+   if(!+[1,]){
+    window.scrollBy(0,-40);
+    scrolldelay = setTimeout('pageScroll()',5);
+    var sTop=document.documentElement.scrollTop+document.body.scrollTop;
+    if(sTop==0) clearTimeout(scrolldelay);
+   	}
+　　 else{
+		    window.scrollBy(0,-10);
+    scrolldelay = setTimeout('pageScroll()',5);
+    var sTop=document.documentElement.scrollTop+document.body.scrollTop;
+    if(sTop==0) clearTimeout(scrolldelay);
+	}
+
+}
+
+	</script>
+</body>
+</html>

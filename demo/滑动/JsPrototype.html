@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function learnpro(type){
+				this.typename = "";
+				this.typeid = "";
+				this.init();
+				this.handleDom();
+			}
+			/**
+			 * init
+			 */
+			learnpro.prototype.init = function(){
+				console.log('it is a init!');
+			}
+			/**
+			 * handle
+			 */
+			learnpro.prototype.handleDom = function(){
+				console.log('it is a handle!');
+			}
+			/**
+			 * creat a instance
+			 */
+			var a = new learnpro();
+			console.log(a);
+			var b = new Function();
+			console.log(b);
+			console.log(b.prototype);
+			var c = new Object;
+			console.log(c);
+		</script>
+	</body>
+</html>

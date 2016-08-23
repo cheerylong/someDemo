@@ -1,0 +1,78 @@
+@charset "gb2312";
+
+
+			 
+/* Ô²ÐÎ²Ëµ¥µ¼º½ */
+.info-nr {position:fixed;bottom:10px;left:0px;	z-index:900;tap-highlight-color: rgba(0, 0, 0, 0);}	 
+#toMenu{display:block;width:45px!important;height:45px!important;border-radius:45px;position: absolute;box-shadow:0 0 0 3px #FFFFFF, 0 2px 3px 0 rgba(0, 0, 0, 0.25);
+	    bottom:17px;left: 17px;z-index:9999;color:#fff;background:url(../img/navimg/png2.png) 50% 50% rgba(26,126,237,0.8);background-repeat: no-repeat;background-size:auto 80%;}
+.info-nr-phone{height:100px;width:100px;}
+.info-nr-phone2{height:185px;width:195px;}
+#info-nr-phone{position:relative;border-radius:0 167px 0 0;}
+.info-nr-phone>div {
+	width:40px;
+	height:40px;
+	border-radius:40px;
+	box-shadow:0 0 0 3px #FFFFFF, 0 2px 5px 0 rgba(0, 0, 0, 0.25);	
+	position:absolute;
+	bottom:0;
+	left:0;
+	margin-bottom:20px;
+	margin-left:20px;
+	z-index:900;
+	-moz-transition: transform 200ms;
+	-webkit-transition: -webkit-transform 200ms;
+	-ms-transition: transform 200ms;	
+}
+.info-nr-phone>div a{ display: block;height:100%;width:100%;}
+.info-nr-phone> .to_01 {-webkit-transform: translate(-14px, -120px) rotate(720deg); 
+						   -moz-transform: translate(-14px, -120px) rotate(720deg);
+						    -ms-transform: translate(-14px, -120px) rotate(720deg); 
+						     -o-transform: translate(-14px, -120px) rotate(720deg);
+							    transform: translate(-14px, -120px) rotate(720deg);
+								background:url(../img/navimg/55.png) 50% 50% no-repeat rgba(0,0,0,0.7);
+								background-size:auto 85%;}
+.info-nr-phone> .to_02 {-webkit-transform: translate(39px, -108px) rotate(720deg); 
+						   -moz-transform: translate(39px, -108px) rotate(720deg);
+						    -ms-transform: translate(39px, -108px) rotate(720deg); 
+						     -o-transform: translate(39px, -108px) rotate(720deg); 
+							    transform: translate(39px, -108px) rotate(720deg);
+								background:url(../img/navimg/4.png) 50% 50% no-repeat rgba(0,0,0,0.7);
+								background-size:auto 80%;}
+.info-nr-phone> .to_03 {-webkit-transform: translate(85px, -80px) rotate(720deg); 
+						   -moz-transform: translate(85px, -80px) rotate(720deg);
+						    -ms-transform: translate(85px, -80px) rotate(720deg); 
+						     -o-transform: translate(85px, -80px) rotate(720deg);
+						 	    transform: translate(85px, -80px) rotate(720deg);
+								background:url(../img/navimg/3.png) 50% 50% no-repeat rgba(0,0,0,0.7);
+								background-size:auto 75%;}
+.info-nr-phone> .to_04 {-webkit-transform: translate(116px, -36px) rotate(720deg);
+						   -moz-transform: translate(116px, -36px) rotate(720deg);
+						    -ms-transform: translate(116px, -36px) rotate(720deg);
+						     -o-transform: translate(116px, -36px) rotate(720deg); 
+							    transform: translate(116px, -36px) rotate(720deg);
+								background:url(../img/navimg/2.png) 50% 50% no-repeat rgba(0,0,0,0.7);
+								background-size:auto 70%;} 
+.info-nr-phone> .to_05 {-webkit-transform: translate(130px, 14px) rotate(720deg); 
+						   -moz-transform: translate(130px, 14px) rotate(720deg);
+						    -ms-transform: translate(130px, 14px) rotate(720deg); 
+						     -o-transform: translate(130px, 14px) rotate(720deg); 
+							    transform: translate(130px, 14px) rotate(720deg);
+								background:url(../img/navimg/1.png) 50% 50% no-repeat rgba(0,0,0,0.7);
+								background-size:auto 72%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,7 @@
+
+* { padding: 0; margin: 0; }
+li { list-style: none; }
+#iphone { width:843px; height: 600px; background:url(bg.png) no-repeat; position:relative;   }
+#wrap { width: 238px; height: 360px; position: absolute; top: 100px; left: 25px; overflow:hidden; }
+#iphone ul { width: 4600px; height: 361px; cursor: pointer; position: absolute; top: 0px; left: 0px; }
+#iphone li { float: left; width:240px; height:360px; overflow:hidden; }
