@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>show page</title>
+    <style>
+    html,
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: 15px;
+        max-width: 800px;
+        margin:0 auto;
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        border-right: 1.5rem #00BCD4 solid;
+        border-top: 1.5rem #2196F3 solid;
+        border-bottom: 1.5rem #9dba7c solid;
+        border-left: 1.5rem #009688 solid;
+        box-sizing: border-box;
+        /*transform: perspective(2000px) rotateY(422deg);*/
+    }
+    </style>
+    <script>
+    ;
+    (function(win) {
+        var doc = win.document;
+        var docEl = doc.documentElement;
+        var tid;
+
+        function refreshRem() {
+            var width = docEl.getBoundingClientRect().width;
+            if (width > 540) { // 最大宽度
+                width = 540;
+            }
+            var rem = width / 10; // 将屏幕宽度分成10份， 1份为1rem
+            docEl.style.fontSize = rem + 'px';
+        }
+
+        win.addEventListener('resize', function() {
+            clearTimeout(tid);
+            // tid = setTimeout(refreshRem, 300);
+            refreshRem();
+        }, false);
+        win.addEventListener('pageshow', function(e) {
+            if (e.persisted) {
+                clearTimeout(tid);
+                tid = setTimeout(refreshRem, 300);
+            }
+        }, false);
+
+        refreshRem();
+
+    })(window);
+    </script>
+</head>
+
+<body>
+    <div id="container" class="container">
+        <ul>
+            <ol>12312312312313131</ol>
+            <ol>123131313131313131</ol>
+            <ol>12312312222231313</ol>
+            <ol>123131313313131313</ol>
+            <ol>123123131313131311</ol>
+        </ul>
+    </div>
+</body>
+
+</html>

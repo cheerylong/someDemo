@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>渐变</title>
+	<style>
+	.changeColor{
+		width: 300px;
+		height: 300px;
+	}
+	</style>
+</head>
+<body>
+	<div class="changeColor"></div>
+	<script>
+		window.onload = function(){
+			var cs = document.querySelector('.changeColor');
+			var colorsArray = ['red','black','white','pink','green'];
+			var i = 0;
+			var styles1 = "linear-gradient(to left,yellow";
+			var a = setInterval(function(){
+				console.log(i);
+                           styles1 +=','+colorsArray[i];
+                           var styles2 = ")";
+                           cs.style.backgroundImage = styles1 + styles2;
+                           console.log(cs.style);
+                           i++;
+                           if(i == 5){
+                           	clearInterval(a);
+                           }
+			}, 500);
+		}
+	</script>
+</body>
+</html>
